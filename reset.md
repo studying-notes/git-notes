@@ -20,3 +20,11 @@ $ git reset --soft HEAD^
 - `--mixed` - 不删除工作空间改动代码，撤销 `commit`，并且撤销 `git add .` 操作，默认参数
 - `--soft  ` - 不删除工作空间改动代码，撤销 `commit`，不撤销 `git add .`
 - `--hard` - 删除工作空间改动代码，撤销 `commit`，撤销 `git add .`
+
+## 撤销暂存
+
+以下命令可以撤销暂存的更改，就是已经 `git add <file>` 但是还未 `git commit -m ""` 的情形：
+
+```shell
+$ git restore --stage<file>
+```

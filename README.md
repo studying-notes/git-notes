@@ -17,6 +17,7 @@
 | git add<file> | 暂存更改 |
 | git reset HEAD<file> | 取消文件暂存更改 |
 | git checkout <file> | 放弃文件更改 |
+| git restore --stage<file> | 放弃文件暂存更改 |
 | git commit -m | 提交更改 |
 | git commit --amend -m | 修正先前的提交 |
 | git checkout <hash> | 切换旧版本、切换分支 |
@@ -34,4 +35,4 @@
 | git checkout -b <branch> <origin/branch> | 克隆远程分支 |
 | git merge <branch> | 合并 |
 | git rebase <branch> | 变基 |
-| git mv -f oldfolder newfolder |  |
+| git mv -f oldfolder newfolder | 重命名文件夹 |
