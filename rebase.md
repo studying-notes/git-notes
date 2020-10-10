@@ -4,7 +4,7 @@ author: "Rustle Karl"  # 作者
 
 # 文章
 title: "Git 变基与合并"  # 文章标题
-url:  "posts/2020/09/19/gitrebase"  # 设置网页链接，默认使用文件名
+url:  "posts/git/rebase"  # 设置网页链接，默认使用文件名
 tags: [ "git", "command"] # 自定义标签
 series: [ "Git 学习笔记"] # 文章主题/文章系列
 categories: [ "学习笔记"] # 文章分类

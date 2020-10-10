@@ -5,7 +5,7 @@ author: "Rustle Karl"  # 作者
 # 文章
 title: "Git 显示提交历史"  # 文章标题
 description: "Git 显示提交历史，自定义输出格式"
-url:  "posts/2020/09/19/gitlog"  # 设置网页链接，默认使用文件名
+url:  "posts/git/log"  # 设置网页链接，默认使用文件名
 tags: [ "git", "command"] # 自定义标签
 series: [ "Git 学习笔记"] # 文章主题/文章系列
 categories: [ "学习笔记"] # 文章分类
@@ -47,6 +47,14 @@ git log --pretty=oneline --author=<your name>
 ```shell
 # 全部显示
 git log --pretty=oneline --all
+```
+
+## 显示全部提交历史
+
+有时候进行了误操作，撤销了某次提交，这时候 git log 是不显示这个操作的。
+
+```shell
+git relog
 ```
 
 ## 自定义输出格式
