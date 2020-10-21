@@ -3,8 +3,8 @@ date: 2020-09-19T21:32:00+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 # 文章
-title: "Git 撤销提交、撤销暂存"  # 文章标题
-description: "Git 撤销上一步提交操作，撤销暂存，误操作恢复"
+title: "Git 撤销提交、撤销暂存、强制覆盖"  # 文章标题
+description: "Git 撤销上一步提交操作，撤销暂存，误操作恢复，强制覆盖本地"
 url:  "posts/git/reset"  # 设置网页链接，默认使用文件名
 tags: [ "git", "command", "reset"] # 自定义标签
 series: [ "Git 学习笔记"] # 文章主题/文章系列
@@ -16,6 +16,16 @@ chapter: false  # 将页面设置为章节
 
 draft: false  # 草稿
 ---
+
+## 强制覆盖
+
+```shell
+git fetch --all
+```
+
+```shell
+git reset --hard origin/master
+```
 
 ## 撤销提交
 
