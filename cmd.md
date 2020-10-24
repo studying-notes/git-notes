@@ -43,3 +43,27 @@ draft: false  # 草稿
 | git merge <branch> | 合并 |
 | git rebase <branch> | 变基 |
 | git mv -f oldfolder newfolder | 重命名文件夹 |
+
+## 克隆时带用户名
+
+```shell
+git clone http://fujiawei@git.datacubr.com/spiderman/slf_spiderbid.git
+```
+
+## 添加远程仓库
+
+```shell
+git remote add origin git@github.com:ffujiawei/spiders-go.git
+```
+
+## 变更远程仓库
+
+```shell
+git remote set-url origin git@github.com:ffujiawei/docker-notes.git
+```
+
+## 推到远程仓库
+
+```shell
+git push -u origin master
+```
