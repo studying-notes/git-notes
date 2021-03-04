@@ -17,6 +17,33 @@ chapter: false  # 将页面设置为章节
 draft: false  # 草稿
 ---
 
+## 代理
+
+### 全局 Git 代理
+
+```shell
+git config --global http.proxy 'socks5://127.0.0.1:7890'
+git config --global https.proxy 'socks5://127.0.0.1:7890'
+```
+
+### 仅 Github 代理
+
+```shell
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
+
+```
+
+取消代理
+
+```shell
+git config --global --unset http.https://github.com.proxy
+```
+
+```shell
+
+```
+
+
 ## 单账号设置
 
 ```shell
@@ -28,6 +55,10 @@ git config --list
 ```shell
 git config --global user.name "Rustle Karl"
 git config --global user.email "fu.jiawei@outlook.com"
+
+git config --global core.eol lf
+git config --global core.autocrlf false
+git config --global core.safecrlf true
 ```
 
 ### 局部设置
@@ -87,13 +118,23 @@ ssh-keygen -t rsa -f c:/users/admin/.ssh/id_rsa.gitlab -C "fu.jiawei@outlook.com
 ```conf
 Host github.com
     HostName github.com
-    User git 
+    User git
     IdentityFile ~/.ssh/id_rsa.github
 
 Host gitlab.com
     HostName gitlab.com
     User git
     IdentityFile ~/.ssh/id_rsa.gitlab
+    Port 10022
+
+Host 192.168.199.208
+    HostName 192.168.199.208
+    User root
+
+Host 192.168.199.208
+    HostName 192.168.199.208
+    User git
+    Port 10022
 ```
 
 4. 验证是否成功
@@ -107,10 +148,8 @@ Hi fujiawei-dev! You've successfully authenticated, but GitHub does not provide 
 ```
 
 ```shell
-ssh -T git@jixinwulian.cn:12053
+ssh -T git@jixinwulian.cn
 ```
-
-今天（2020.10.09）遇到问题了，无法这样验证，只好单账号了。
 
 ## 设置别名
 
