@@ -5,7 +5,7 @@ author: "Rustle Karl"  # 作者
 # 文章
 title: "Git 账号设置、密钥访问"  # 文章标题
 description: "Git 多个账号设置、通过 SSH 访问、设置别名等"
-url:  "posts/git/config"  # 设置网页链接，默认使用文件名
+url:  "posts/git/quickstart/config"  # 设置网页链接，默认使用文件名
 tags: [ "git", "github", "gitlab", "config"] # 自定义标签
 series: [ "Git 学习笔记"] # 文章主题/文章系列
 categories: [ "学习笔记"] # 文章分类
@@ -30,7 +30,15 @@ git config --global https.proxy 'socks5://127.0.0.1:7890'
 
 ```shell
 git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
+```
 
+```shell
+git config --global http.https://github.com.proxy http://127.0.0.1:8118
+```
+
+```shell
+git config --global http.https://github.com.proxy http://192.168.10.138:8118
+git config --global http.https://github.com.proxy http://192.168.199.140:8118
 ```
 
 取消代理
@@ -39,8 +47,12 @@ git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
 git config --global --unset http.https://github.com.proxy
 ```
 
-```shell
+## NPM 代理
 
+```shell
+npm config set proxy=http://127.0.0.1:7890
+npm config set proxy=http://127.0.0.1:8118
+npm config delete proxy
 ```
 
 
@@ -97,7 +109,7 @@ git config --global --unset user.name "Rustle Karl"
 git config --global --unset user.email "fu.jiawei@outlook.com"
 ```
 
-2. 生成不同网站的 SSH Keys
+2. 生成不同网站的 SSH Keys，也可以相同
 
 - Github
 
@@ -121,21 +133,26 @@ Host github.com
     User git
     IdentityFile ~/.ssh/id_rsa.github
 
-Host gitlab.com
-    HostName gitlab.com
-    User git
-    IdentityFile ~/.ssh/id_rsa.gitlab
+Host ubuntu-gitea
+    HostName ubuntu
     Port 10022
+    User git 
+    IdentityFile ~/.ssh/id_rsa.github
 
-Host 192.168.199.208
-    HostName 192.168.199.208
+Host ubuntu
+    HostName ubuntu
+    Port 22
     User root
+    IdentityFile ~/.ssh/id_rsa
 
-Host 192.168.199.208
-    HostName 192.168.199.208
-    User git
-    Port 10022
+Host slave
+    HostName slave
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa
 ```
+
+> git remote set-url origin ssh://git@ubuntu-gitea:10022/root/vbot.git
 
 4. 验证是否成功
 
