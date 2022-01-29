@@ -6,3 +6,5 @@
 - [Git 更改提交操作](quickstart/modify.md)
 - [Git 操作远程仓库](quickstart/remote.md)
 
+- [Github 的功能](quickstart/github.md)
+- [GitHub Pull Request 功能实践](quickstart/pr.md)
