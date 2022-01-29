@@ -8,3 +8,4 @@
 
 - [Github 的功能](quickstart/github.md)
 - [GitHub Pull Request 功能实践](quickstart/pr.md)
+- [GitHub Actions 基础介绍](quickstart/actions.md)
