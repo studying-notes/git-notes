@@ -27,6 +27,11 @@ git fetch --all
 git reset --hard origin/master
 ```
 
+```shell
+# 放弃所有修改、新增、删除文件
+git checkout . && git clean -df
+```
+
 ## 撤销提交
 
 撤销上一步提交操作：
