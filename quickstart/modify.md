@@ -43,9 +43,9 @@ git checkout -b fix-B
 
 现在的状态如图 4.5 所示。接下来我们的目标是图 4.6 中所示的状态，即主干分支合并 feature-A 分支的修改后，又合并了 fix-B 的修改。
 
-![](../assests/images/图%204.5_当前fix-B分支的状态.png)
+![](../assests/images/图4.5_当前fix-B分支的状态.png)
 
-![](../assests/images/图%204.6_fix-B分支的下一步目标.png)
+![](../assests/images/图4.6_fix-B分支的下一步目标.png)
 
 3. 推进至 feature-A 分支合并后的状态
 
@@ -69,7 +69,7 @@ git reset --hard 83b0b94
 
 之前我们使用 git reset -- hard 命令回溯了历史，这里又再次通过它恢复到了回溯前的历史状态。
 
-![](../assests/images/图%204.7_恢复历史后的状态.png)
+![](../assests/images/图4.7_恢复历史后的状态.png)
 
 ## 消除冲突
 
