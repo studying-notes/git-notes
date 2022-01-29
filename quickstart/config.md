@@ -3,8 +3,8 @@ date: 2020-07-14T16:20:00+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 # 文章
-title: "Git 账号设置、密钥访问"  # 文章标题
-description: "Git 多个账号设置、通过 SSH 访问、设置别名等"
+title: "Git 与 GitHub 设置"  # 文章标题
+description: "Git 多个账号设置、GitHub 通过 SSH 访问、设置别名等"
 url:  "posts/git/quickstart/config"  # 设置网页链接，默认使用文件名
 tags: [ "git", "github", "gitlab", "config"] # 自定义标签
 series: [ "Git 学习笔记"] # 文章主题/文章系列
@@ -17,7 +17,7 @@ chapter: false  # 将页面设置为章节
 draft: false  # 草稿
 ---
 
-## 代理
+## 网络代理
 
 ### 全局 Git 代理
 
@@ -29,32 +29,18 @@ git config --global https.proxy 'socks5://127.0.0.1:7890'
 ### 仅 Github 代理
 
 ```shell
+# socks5
 git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
-```
 
-```shell
+# http
 git config --global http.https://github.com.proxy http://127.0.0.1:8118
 ```
 
-```shell
-git config --global http.https://github.com.proxy http://192.168.10.138:8118
-git config --global http.https://github.com.proxy http://192.168.199.140:8118
-```
-
-取消代理
+### 取消代理
 
 ```shell
 git config --global --unset http.https://github.com.proxy
 ```
-
-## NPM 代理
-
-```shell
-npm config set proxy=http://127.0.0.1:7890
-npm config set proxy=http://127.0.0.1:8118
-npm config delete proxy
-```
-
 
 ## 单账号设置
 
@@ -68,8 +54,15 @@ git config --list
 git config --global user.name "Rustle Karl"
 git config --global user.email "fu.jiawei@outlook.com"
 
+# 换行符设置
+
+# 默认 LF 换行符
 git config --global core.eol lf
+
+# 禁止自动转换 CRLF
 git config --global core.autocrlf false
+
+# 同时存在 CRLF 和 LF 则不允许提交
 git config --global core.safecrlf true
 ```
 
@@ -162,10 +155,6 @@ ssh -T git@github.com
 
 ```
 Hi fujiawei-dev! You've successfully authenticated, but GitHub does not provide shell access.
-```
-
-```shell
-ssh -T git@jixinwulian.cn
 ```
 
 ## 设置别名
