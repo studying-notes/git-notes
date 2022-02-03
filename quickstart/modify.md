@@ -138,7 +138,7 @@ git commit -am "Fix typo"
 因此，我们来更改历史。将 "Fix typo" 修正的内容与之前一次的提交合并，在历史记录中合并为一次完美的提交。为此，我们要用到 git rebase 命令。
 
 ```shell
-git rebase -i HEAD～2
+git rebase -i HEAD~2
 ```
 
 用上述方式执行 git rebase 命令，可以选定当前分支中包含 HEAD（最新提交）在内的两个最新历史记录为对象，并在编辑器中打开。
@@ -162,3 +162,9 @@ fixup 6fba227 Fix typo
 现在再查看提交日志时会发现 Add feature-C 的哈希值已经不是 7a34294 了，这证明提交已经被更改。
 
 这样一来，Fix typo 就从历史中被抹去，也就相当于 Add feature-C 中从来没有出现过拼写错误。这算是一种良性的历史改写。
+
+但是 GitHub 会拒绝，必须用强制命令：
+
+```shell
+git push -f
+```
