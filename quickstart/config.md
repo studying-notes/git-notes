@@ -6,9 +6,9 @@ author: "Rustle Karl"  # 作者
 title: "Git 与 GitHub 设置"  # 文章标题
 description: "Git 多个账号设置、GitHub 通过 SSH 访问、设置别名等"
 url:  "posts/git/quickstart/config"  # 设置网页链接，默认使用文件名
-tags: [ "git", "github", "gitlab", "config"] # 自定义标签
-series: [ "Git 学习笔记"] # 文章主题/文章系列
-categories: [ "学习笔记"] # 文章分类
+tags: [ "git", "github", "gitlab", "config" ] # 自定义标签
+series: [ "Git 学习笔记" ] # 文章主题/文章系列
+categories: [ "学习笔记" ] # 文章分类
 
 # 章节
 weight: 20 # 文章在章节中的排序优先级，正序排序
@@ -129,7 +129,7 @@ Host github.com
 Host ubuntu-gitea
     HostName ubuntu
     Port 10022
-    User git 
+    User git
     IdentityFile ~/.ssh/id_rsa.github
 
 Host ubuntu

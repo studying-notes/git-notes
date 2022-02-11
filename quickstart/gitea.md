@@ -4,11 +4,10 @@ author: "Rustle Karl"  # 作者
 
 # 文章
 title: "Gitea 配置文件"  # 文章标题
-# description: "文章描述"
-url:  "posts/git/addition/gitea"  # 设置网页永久链接
-tags: [ "git", "gitea"]  # 标签
-series: [ "Git 学习笔记"] # 文章主题/文章系列
-categories: [ "学习笔记"] # 文章分类
+url:  "posts/git/quickstart/gitea"  # 设置网页永久链接
+tags: [ "git", "gitea" ] # 标签
+series: [ "Git 学习笔记" ] # 文章主题/文章系列
+categories: [ "学习笔记" ] # 文章分类
 
 # 章节
 weight: 20 # 排序优先级
@@ -53,9 +52,9 @@ DB_TYPE  = sqlite3
 HOST     = localhost:3306
 NAME     = gitea
 USER     = root
-PASSWD   = 
+PASSWD   =
 LOG_SQL  = false
-SCHEMA   = 
+SCHEMA   =
 SSL_MODE = disable
 CHARSET  = utf8
 

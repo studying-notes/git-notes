@@ -6,9 +6,9 @@ author: "Rustle Karl"  # 作者
 title: "Git 分支操作"  # 文章标题
 # description: "文章描述"
 url:  "posts/git/quickstart/branch"  # 设置网页永久链接
-tags: [ "git", "github", "gitlab", "quickstart"] # 自定义标签
-series: [ "Git 学习笔记"] # 文章主题/文章系列
-categories: [ "学习笔记"] # 文章分类
+tags: [ "git", "github", "gitlab", "quickstart" ] # 自定义标签
+series: [ "Git 学习笔记" ] # 文章主题/文章系列
+categories: [ "学习笔记" ] # 文章分类
 
 # 章节
 weight: 20 # 排序优先级

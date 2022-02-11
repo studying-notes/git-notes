@@ -6,9 +6,9 @@ author: "Rustle Karl"  # 作者
 title: "GitHub Actions 基础介绍"  # 文章标题
 # description: "文章描述"
 url:  "posts/git/quickstart/actions"  # 设置网页永久链接
-tags: [ "git", "github", "gitlab", "quickstart"] # 自定义标签
-series: [ "Git 学习笔记"] # 文章主题/文章系列
-categories: [ "学习笔记"] # 文章分类
+tags: [ "git", "github", "gitlab", "quickstart" ] # 自定义标签
+series: [ "Git 学习笔记" ] # 文章主题/文章系列
+categories: [ "学习笔记" ] # 文章分类
 
 # 章节
 weight: 20 # 排序优先级
@@ -193,11 +193,11 @@ jobs:
 
 ```yaml
 steps:
-  - uses: actions/setup-node@74bc508 
+  - uses: actions/setup-node@74bc508
 # 指定一个 commit
-  - uses: actions/setup-node@v1.2    
+  - uses: actions/setup-node@v1.2
 # 指定一个 tag
-  - uses: actions/setup-node@master  
+  - uses: actions/setup-node@master
 # 指定一个分支
 ```
 

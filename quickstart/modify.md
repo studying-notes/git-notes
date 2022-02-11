@@ -6,9 +6,9 @@ author: "Rustle Karl"  # 作者
 title: "Git 更改提交操作"  # 文章标题
 # description: "文章描述"
 url:  "posts/git/quickstart/modify"  # 设置网页永久链接
-tags: [ "git", "github", "gitlab", "quickstart"] # 自定义标签
-series: [ "Git 学习笔记"] # 文章主题/文章系列
-categories: [ "学习笔记"] # 文章分类
+tags: [ "git", "github", "gitlab", "quickstart" ] # 自定义标签
+series: [ "Git 学习笔记" ] # 文章主题/文章系列
+categories: [ "学习笔记" ] # 文章分类
 
 # 章节
 weight: 20 # 排序优先级
@@ -18,6 +18,103 @@ index: true  # 是否可以被索引
 toc: true  # 是否自动生成目录
 draft: false  # 草稿
 ---
+
+- [撤销提交](#撤销提交)
+  - [撤销到 add](#撤销到-add)
+  - [撤销到 commit](#撤销到-commit)
+  - [删除改动代码](#删除改动代码)
+- [强制覆盖](#强制覆盖)
+- [误操作恢复](#误操作恢复)
+- [撤销暂存](#撤销暂存)
+- [git reset](#git-reset)
+- [消除冲突](#消除冲突)
+- [git commit --amend](#git-commit---amend)
+- [git rebase -i](#git-rebase--i)
+
+## 撤销提交
+
+撤销上一步提交操作：
+
+```shell
+git reset [flag] HEAD^
+```
+
+`HEAD^` 表示上一次 `commit` 操作，如果想撤销两次 `commit` 操作，可以改为 `HEAD~2`。
+
+- `--mixed` - 不删除工作空间改动代码，撤销 `commit`，并且撤销 `git add .` 操作，默认参数
+- `--soft  ` - 不删除工作空间改动代码，撤销 `commit`，不撤销 `git add .`
+- `--hard` - 删除工作空间改动代码，撤销 `commit`，撤销 `git add .`
+
+### 撤销到 add
+
+```shell
+git reset HEAD^
+```
+
+在 Windows 下，以上命令可能错误，因为 `^` 默认表示换行符，必须加上引号或转义。
+
+```shell
+git reset "HEAD^"
+```
+
+```shell
+git reset HEAD^^
+```
+
+```shell
+git reset "HEAD^"
+```
+
+### 撤销到 commit
+
+```shell
+git reset --soft HEAD^
+```
+
+### 删除改动代码
+
+```shell
+git reset --hard HEAD^
+```
+
+## 强制覆盖
+
+```shell
+git fetch --all
+```
+
+```shell
+git reset --hard origin/master
+```
+
+```shell
+# 放弃所有修改、新增、删除文件
+git checkout . && git clean -df
+```
+
+## 误操作恢复
+
+```shell
+git reflog
+```
+
+```shell
+git reset --hard xxx
+```
+
+因为 reset 等操作丢失提交是可以找回来，除非操作已经被当做垃圾处理掉了，一般是 30 天以后。
+
+## 撤销暂存
+
+以下命令可以撤销暂存的更改，就是已经 `git add <file>` 但是还未 `git commit -m ""` 的情形：
+
+```shell
+git restore --staged <file>
+```
+
+```shell
+git restore --staged .
+```
 
 ## git reset
 
