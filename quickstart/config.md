@@ -79,7 +79,11 @@ git config user.email "fu.jiawei@outlook.com"
 ssh-keygen -t rsa -C "fu.jiawei@outlook.com"
 ```
 
-然后在网站上添加公钥
+然后在网站上添加公钥：
+
+```shell
+cat ~/.ssh/id_rsa.pub
+```
 
 ## `~/.ssh/config` 文件格式
 
