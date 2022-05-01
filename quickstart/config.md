@@ -161,6 +161,15 @@ ssh -T git@github.com
 Hi fujiawei-dev! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+```shell
+ssh -T git@ubuntu-amd64-gitea -p10022
+```
+
+```
+Hi there, root! You've successfully authenticated with the key named fu.jiawei@outlook.com, but Gitea does not provide shell access.
+If this is unexpected, please log in with password and setup Gitea under another user.
+```
+
 ## 设置别名
 
 添加下列内容到 `$HOME` 目录的 `.gitconfig` 文件中：
