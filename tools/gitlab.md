@@ -3,7 +3,7 @@ date: 2022-05-01T17:33:32+08:00
 author: "Rustle Karl"
 
 title: "部署 GitLab"
-url:  "posts/git/docs/develop/gitlab"  # 永久链接
+url:  "posts/git/tools/gitlab"  # 永久链接
 tags: [ "git", "github", "gitlab" ] # 自定义标签
 series: [ "Git 学习笔记" ] # 文章主题/文章系列
 categories: [ "学习笔记" ] # 文章分类

@@ -49,4 +49,5 @@ draft: false  # 草稿
 ## 常用工具
 
 - [部署 Gitea](tools/gitea.md)
+- [部署 GitLab](tools/gitlab.md)
 
