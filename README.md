@@ -50,4 +50,5 @@ draft: false  # 草稿
 
 - [部署 Gitea](tools/gitea.md)
 - [部署 GitLab](tools/gitlab.md)
+- [TeamCity 持续集成软件部署](tools/teamcity.md)
 
