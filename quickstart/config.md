@@ -17,6 +17,36 @@ chapter: false  # 将页面设置为章节
 draft: false  # 草稿
 ---
 
+## 简单设置
+
+添加下列内容到 `$HOME` 目录的 `.gitconfig` 文件中：
+
+```
+code .gitconfig
+```
+
+```ini
+[user]
+        name = Rustle Karl
+        email = fu.jiawei@outlook.com
+[init]
+        defaultBranch = main
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        type = cat-file -t
+        dump = cat-file -p
+[safe]
+        directory = *
+[core]
+	eol = lf
+	autocrlf = false
+	safecrlf = true
+```
+
 ## 网络代理
 
 ### 全局 Git 代理
@@ -53,6 +83,7 @@ git config --list
 ```shell
 git config --global user.name "Rustle Karl"
 git config --global user.email "fu.jiawei@outlook.com"
+git config --global init.defaultBranch main
 
 # 换行符设置
 
@@ -168,19 +199,4 @@ ssh -T git@ubuntu-amd64-gitea -p10022
 ```
 Hi there, root! You've successfully authenticated with the key named fu.jiawei@outlook.com, but Gitea does not provide shell access.
 If this is unexpected, please log in with password and setup Gitea under another user.
-```
-
-## 设置别名
-
-添加下列内容到 `$HOME` 目录的 `.gitconfig` 文件中：
-
-```shell
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
 ```
