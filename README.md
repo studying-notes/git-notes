@@ -19,8 +19,6 @@ draft: false  # 草稿
 
 > 纸上得来终觉浅，学到过知识点分分钟忘得一干二净，今后无论学什么，都做好笔记吧。
 
-为了安全是越来越难用了，信任工作区、.git 文件夹权限，之前没发觉，重装系统之后所有的仓库全部权限拒绝，工作区可以全部忽略，但文件夹只能一个一个重建权限。。。
-
 ## 目录结构
 
 - `assets/images`: 笔记配图
@@ -45,6 +43,10 @@ draft: false  # 草稿
 - [Github 的功能](quickstart/github.md)
 - [GitHub Pull Request 功能实践](quickstart/pr.md)
 - [GitHub Actions 基础介绍](quickstart/actions.md)
+
+## 基础教程
+
+- [submodule 子模块](docs/submodule.md)
 
 ## 常用工具
 
