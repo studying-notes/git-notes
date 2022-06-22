@@ -38,7 +38,6 @@ draft: false  # 草稿
 - [Git 基本操作](quickstart/operation.md)
 - [Git 分支操作](quickstart/branch.md)
 - [Git 更改提交操作](quickstart/modify.md)
-- [Git 操作远程仓库](quickstart/remote.md)
 
 - [Github 的功能](quickstart/github.md)
 - [GitHub Pull Request 功能实践](quickstart/pr.md)
@@ -46,6 +45,7 @@ draft: false  # 草稿
 
 ## 基础教程
 
+- [Git 操作远程仓库](docs/remote.md)
 - [submodule 子模块](docs/submodule.md)
 
 ## 常用工具
@@ -53,4 +53,3 @@ draft: false  # 草稿
 - [部署 Gitea](tools/gitea.md)
 - [部署 GitLab](tools/gitlab.md)
 - [TeamCity 持续集成软件部署](tools/teamcity.md)
-
