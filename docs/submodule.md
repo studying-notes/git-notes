@@ -3,10 +3,9 @@ date: 2022-06-22T15:04:12+08:00
 author: "Rustle Karl"
 
 title: "submodule 子模块"
-url:  "posts/git/docs/submodule"  # 永久链接
-tags: [ "Git", "README" ]  # 标签
-series: [ "Git 学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+url:  "posts/git/docs/submodule"
+tags: [ "Git", "README" ]
+categories: [ "Git 学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿
@@ -14,15 +13,13 @@ draft: false  # 草稿
 
 > https://git-scm.com/book/zh/v2
 
+> 因为主题的搜索功能依赖特定的目录名，所以手动改了目录名，之后怎么改 .gitmodules 文件都无法追踪改动，报错无法找到原来的目录，只能重新初始化父仓库了，强制推送。
+
 Git 通过子模块来解决"一个项目在目录结构中包含另一个独立项目"这个问题。
 
-子模块允许你将一个 Git 仓库作为另一个 Git 仓库的子目录。 它能让你将另一个仓库克隆到自己的项目中，同时还保持提交的独立
+子模块允许你将一个 Git 仓库作为另一个 Git 仓库的子目录。 它能让你将另一个仓库克隆到自己的项目中，同时还保持提交的独立。
 
 ## 添加子模块
-
-```shell
-git init
-```
 
 ```shell
 git submodule add remote_url local_path
