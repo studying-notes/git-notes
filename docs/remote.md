@@ -3,10 +3,9 @@ date: 2022-01-29T10:12:06+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 title: "Git 操作远程仓库"  # 文章标题
-url:  "posts/git/quickstart/remote"  # 设置网页永久链接
-tags: [ "Git", "README" ]  # 标签
-series: [ "Git 学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+url:  "posts/git/docs/remote"
+tags: [ "Git" ]
+categories: [ "Git 学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿
