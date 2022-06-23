@@ -2,15 +2,16 @@
 date: 2022-05-01T09:25:56+08:00
 author: "Rustle Karl"
 
-title: "TeamCity 持续集成软件部署"
+title: "部署TeamCity 持续集成服务"
 url:  "posts/git/tools/teamcity"  # 永久链接
-tags: [ "git", "github", "gitlab" ] # 自定义标签
-series: [ "Git 学习笔记" ] # 文章主题/文章系列
-categories: [ "学习笔记" ] # 文章分类
+tags: [ "git", "teamcity" ]
+categories: [ "Git 学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿
 ---
+
+> 现在的做法是主服务安装在 Docker，Agent 安装在宿主机，方便直接访问其他资源。
 
 ## 下载软件
 
@@ -26,9 +27,9 @@ mkdir ~/bin
 tar -zxvf TeamCity-2022.04.tar.gz -C ~/bin
 ```
 
-# 启动
+## 启动
 
-貌似不能运行在 ARM 上。
+> 不能运行在 ARM 上。
 
 ```shell
 ~/bin/TeamCity/bin/teamcity-server.sh start

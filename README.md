@@ -49,6 +49,5 @@ draft: false  # 草稿
 
 ## 常用工具
 
-- [部署 Gitea](tools/gitea.md)
-- [部署 GitLab](tools/gitlab.md)
-- [TeamCity 持续集成软件部署](tools/teamcity.md)
+- [部署 Gitea 托管服务](tools/gitea.md)
+- [部署 TeamCity 持续集成服务](tools/teamcity.md)
